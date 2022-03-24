@@ -108,6 +108,10 @@ $ npm install
 # watch mode
 $ npm run start:dev
 
+# test mode
+$ npm run test:cov
+$ npm run test:e2e
+
 # Após subir a app ela ficará disponível em : http://localhost:3000
 
 # swagger disponível em :
