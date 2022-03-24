@@ -9,8 +9,7 @@ export class CustomersController {
   constructor(private customersService: CustomersService) {
 
   }
-
-  @Get()
+  @Get()  
   @ApiResponse({ status: 200, description: 'The customer list has been displayed successfully.' })
   async findAll(): Promise<Customer[]> {
     return this.customersService.findAll();
