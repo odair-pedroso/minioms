@@ -1,3 +1,4 @@
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
@@ -26,48 +27,91 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+# minioms-api
+Aplicação para cadastro de clientes a ser utilizada na disciplina de APIs Rest com Node Js e Typescript da Unifacef.
+
+
+# A solução
+
+
+![Minioms-api drawio](https://user-images.githubusercontent.com/64381101/159826994-0f09f8cf-d926-4dcc-9db4-a5a066ab4b51.png)
+
+
+
+# Contratos da API de clientes:
+
+GET/v1/customers
+{ 
+  "id":"string",
+  "name":"string",
+  "cpf":"string",
+  "cnpj":"string",
+  "email":"string",
+  "phone":"string",
+  "createdDate": "LocalDateTime",
+  "lastModifiedDate": "LocalDateTime"
+}
+
+POST/v1/customers
+{
+  "name": "string",
+  "cpf": "string",
+  "cnpj": "string",
+  "email": "string",
+  "phone": "string"
+}
+
+GET/v1/customers/{id}
+{
+  "id":"string",
+  "name":"string",
+  "cpf":"string",
+  "cnpj":"string",
+  "email":"string",
+  "phone":"string",
+  "createdDate": "LocalDateTime",
+  "lastModifiedDate": "LocalDateTime"
+}
+
+DELETE/v1/customers/{id}
+
+# Tecnologias utilizadas
+NodeJs 14
+Typescript 4
+MySQL 2
+Sequelize 6
+Swagger ( endpoints com filtros por ID apresentam problema no swagger ( pode ser versão do swagger para Nest ) , mas todos os endpoints estão funcionando  plenamente via POSTMAN ).
+NestJs 8
+
+# Para subir a app
+Criar um banco de dados local MYSQL chamado customer, ou alterar o arquivo app.module.ts para o endereço MYSQL correto.
+Para subir a app:
 ## Installation
 
 ```bash
 $ npm install
 ```
 
-## Running the app
-
-```bash
-# development
-$ npm run start
-
 # watch mode
 $ npm run start:dev
 
-# production mode
-$ npm run start:prod
-```
+# Após subir a app ela ficará disponível em : http://localhost:3000
 
-## Test
+# swagger disponível em :
+http://localhost:3000/api/
 
-```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
