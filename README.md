@@ -113,5 +113,7 @@ $ npm run start:dev
 # swagger disponível em :
 http://localhost:3000/api/
 
+Obs: Swagger ( endpoints com filtros por ID apresentam problema no swagger ( pode ser versão do swagger para Nest ) , mas todos os endpoints estão funcionando  plenamente via POSTMAN ).
+
 
 
